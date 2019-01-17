@@ -1,0 +1,36 @@
+<!--example/imgcarousel/imgcarousel.wxml-->
+<swiper class="swiper-block martop-24" previous-margin="90rpx" next-margin="60rpx" current="0" data-index='{{index}}' bindchange="swiperChange" data-imgList='{{imgUrls}}' circular='true'>
+  <block wx:for="{{imgUrls}}" wx:index="{{index}}">
+    <swiper-item class="swiper-item" bindtap='detail' data-imgid='{{item.goods_id}}'>
+      <view class="slide-image {{swiperIndex == index ? 'active' : ''}} yinying fade_in" animation="{{animationData}}" id='getheight'>
+        <view class="weui-flex imgpage backddd imgrad" id='imglist'>
+            <image src="{{loadingimg}}" class="imgpage imgrad fade_in" wx:if="{{item.loaded == false}}"  bindload="imageload" />
+            <image src="{{item.goods_images}}" class="imgpage imgrad fade_in" wx:if="{{item.loaded == true}}"  bindload="imageload" /> 
+        </view>
+        <view class="weui-flex ltitlehe"  id='titles'> 
+            <view class="weui-flex__item pad10 font16 text-cha font-pf">{{item.goods_name}}</view>
+        </view>
+        <view class="weui-flex" id='neirong' style='height:{{swipgao}}'> 
+            <view class="weui-flex__item pad10 font14 text-cha2 font-pf c-rgba1 " >{{item.goods_synopsis}}</view>
+        </view>
+         <view class="weui-flex pad10 heig45" id='shoucan'>
+            <view class="weui-flex__item">
+              <view class="font11 c-rgba2 martop-8 padtop5">
+                <image src='/images/xin_yi.png' class='plimg marrig4'></image>
+                <text class='sctegx'>{{item.goods_collection_num}}收藏</text>
+              </view>
+            </view>
+            <view>
+              <view class="martop-8">
+                <text class='font11 c-rgba2 pltext scstext' wx:if='{{ymnum == 2}}'>热门产品</text>
+              </view>
+            </view>
+        </view>
+      </view>
+    </swiper-item>
+  </block>
+</swiper>
+
+
+<import src="../../img-loader/img-loader.wxml"/>
+<template is="img-loader" data="{{ imgLoadList }}"></template>

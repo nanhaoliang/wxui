@@ -1,0 +1,19 @@
+<view class="main">
+    <view class="form-box">
+        <form bindsubmit="formSubmit">
+            <input value="{{address.name}}" name="name" placeholder="姓名"/>
+            <input type="number" name="phone" value="{{address.phone}}" placeholder="电话号码"/>
+            <input name="demap" value="{{address.demap}}" placeholder="选择地址" bindtap='moveToLocation'/>
+            <input name="detail" value="{{address.detail}}" placeholder="填写详细地址"/>
+            <button form-type="submit">保存</button>
+        </form>
+    </view>
+</view>
+
+<view>
+  腾讯地图API需要先自己申请key之后才能使用 https://lbs.qq.com/guides/startup.html
+</view>
+
+<view>
+  跟手机微信定位选点是一样的
+</view>

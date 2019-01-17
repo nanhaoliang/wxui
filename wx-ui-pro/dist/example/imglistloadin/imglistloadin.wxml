@@ -1,0 +1,17 @@
+<!-- 产品列表 -->
+<view class='cpfl100 martop38s'>
+  <view class="martop-17 cpfl50" wx:for="{{chanpinList}}">
+    <view class="pad10" data-cpid='{{item.goods_id}}'>
+      <view class="cplist">
+        <view class="weui-flex cpimage">
+          <image src='{{item.goods_images}}' wx:if="{{item.loaded == true}}" class='cpimage fade_in'></image>
+          <image src='{{loadingimg}}' wx:if="{{item.loaded == false}}" class='cpimage fade_in'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<import src="../../img-loader/img-loader.wxml"/>
+<template is="img-loader" data="{{ imgLoadList }}"></template>

@@ -1,0 +1,49 @@
+
+<view style='width:100%;'>
+
+  <view style='width:100%;'  wx:if="{{hasList}}">
+    <!-- 商品 -->
+    <view style='width:100%;' class='bors martop-17' wx:for="{{carts}}" wx:key="{{index}}">
+      <view class="weui-flex pad13">
+          <view class="">
+            <icon wx:if="{{item.selected}}" type="success" color="red" data-index="{{index}}"  class="cart-pro-select-1" bindtap="selectList"/>
+            <icon wx:else type="circle" class="cart-pro-select-1" data-index="{{index}}" bindtap="selectList"/>
+          </view>
+          <view class="weui-flex__item">
+            <view class="weui-flex ">
+                <view class=""><image class="guimgma" src="{{item.image}}"></image></view>
+                <view class="weui-flex__item ">
+                  <view class="weui-flex padle10"><text class="cart-pro-name font16">{{item.title}}</text></view>
+                  <view class="weui-flex font14 c-636 padle10 fyf">
+                    <text class="">xl</text>,<text class="">黑色衣服</text><text class="marlet-20">{{item.num}}件</text>
+                  </view>
+                  <view class="weui-flex padle10">
+                      <view class="weui-flex__item">
+                        <text class="cart-pro-price-1 c-fe45 font16 fyf">￥{{item.price}}</text>
+                      </view>
+                      <view class="weui-flex__item">
+                        <view class="delx"><text class="font22" bindtap="deleteList" data-index="{{index}}">×</text></view>
+                      </view>
+                  </view>
+                </view>
+            </view>
+          </view>
+      </view>
+    </view>
+    <!-- 结算 -->
+    <view class="cart-footer">
+        <icon wx:if="{{selectAllStatus}}" type="success_circle" color="#fff" class="total-select" bindtap="selectAll"/>
+        <icon wx:else type="circle" color="#fff" class="total-select" bindtap="selectAll"/>
+        <view class="order-icon" bindtap='zhifudetail'>
+            <image src="/images/jtzf.png"></image>
+        </view>
+        <text bindtap="selectAll">全选</text>
+        <text class="cart-toatl-price">￥{{totalPrice}}</text>
+    </view>
+  </view>
+
+  <view wx:else>
+      <view class="cart-no-data">购物车是空的哦~</view>
+  </view>
+
+</view>

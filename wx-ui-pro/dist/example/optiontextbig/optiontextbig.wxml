@@ -1,0 +1,15 @@
+
+<view class='tabview'>
+  <view class="weui-flex padd10 martop10s marbot7s">
+      <view class="weui-flex__item" wx:for='{{selectData}}' data-index='{{index}}' bindtap="textChange" data-selectData='{{selectData}}' data-type='{{item}}' wx:key='this'>
+        <view class="placeholder textcenter dvtext dhm {{swiperIndex == index ? 'active' : ''}}">{{item.tiele}}</view>
+        <view class="placeholder textcenter xtact dhm {{swiperIndex == index ? 'active1' : ''}}"></view>
+      </view>
+      <!-- 排序图标 -->
+      <view class="weui-flex__item" >
+        <view class="martop-4 sxigm" bindtap='sxiclick'>
+          <image src='{{sximage}}' class='sx-img1'></image>
+        </view>
+      </view>
+  </view>
+</view>

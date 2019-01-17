@@ -1,0 +1,84 @@
+/* example/headtab/headtab.wxss */
+
+.tabview{
+  width:100%;
+  position:fixed;
+  top:0;
+  background:#fff;
+}
+.padd10{
+  padding: 0 10px;
+}
+
+.martop10s{
+  margin-top: 10px
+}
+
+.martop20s{
+  margin-top: 20px
+}
+
+.marbot7s{
+  margin-bottom: 7px
+}
+
+.martop38s{
+  margin-top: 38px
+}
+
+.martop-4{
+  margin-top: 4px;
+}
+
+.textcenter{
+  text-align: center;
+}
+
+.dhm{
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+}
+
+.dvtext{
+  color: #030100ee;
+  font-family: PingFang-SC;
+  font-size: 16px;
+}
+
+.active {
+  transform: scale(1.4);
+  color: #e85027!important;
+  font-family: PingFang-SC;
+  /* z-index: 20; */
+}
+
+.xtact{
+  width:0%;
+  margin:0 auto;
+  transition:width 0.4s;
+	-webkit-transition:width 0.4s; /* Safari */
+  background: rgba(232,80,39,1);
+  height:2px;
+  border-radius:8px;
+}
+
+.active1{
+  /* border-bottom:2px solid rgba(232,80,39,1); */
+  width:33%;
+  margin:0 auto;
+  /* padding-top:4px; */
+  margin-top: 5px;
+}
+
+.sx-img {
+  width: 20px;
+  height: 20px;
+  float: right;
+}
+
+.sx-img1 {
+  width: 16px;
+  height: 17px;
+}

@@ -1,0 +1,87 @@
+<!--pages/govdetail_xq/govdetail_xq.wxml-->
+<!-- 封面图 -->
+<view class="weui-flex">
+    <view class="weui-flex__item hei184" wx:for='{{txtimgList.btfm}}'>
+      <image src='{{item.fmimg}}' class='fmimg' bindtap="fmviewImg" bindload="imageOnLoad" binderror="imageOnLoadError" data-index='{{index}}'></image>
+    </view>
+    <view></view>
+</view>
+
+<!-- 背景色 -->
+<view class='pdload' wx:if='{{loads == 0}}'>
+</view>
+
+<!-- 标题 -->
+<view class="weui-flex" wx:for='{{txtimgList.btfm}}'>
+    <view class="weui-flex__item pad10"><view class="placeholder">{{item.bititle}}</view></view>
+</view>
+
+<!-- 个人信息 -->
+<view class="weui-flex pad10">
+    <view class="">
+      <image class='gvtimg yinying-1' src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1582426919,746061346&fm=26&gp=0.jpg"></image>
+    </view>
+    <view class="weui-flex__item"><view class="placeholder gvname">柠檬很酸</view></view>
+</view>
+
+<view class="weui-flex pad10">
+    <view class=""><view class="placeholder gvtext">阅读10000</view></view>
+    <view class=""><view class="placeholder gvtext marginle">分享10000</view></view>
+    <view class=""><view class="placeholder gvtext marginle">收藏10000</view></view>
+</view>
+<view class='gang'></view>
+
+<!-- 正文内容 -->
+<view class='mar15s' wx:for='{{txtimgList.textimgl}}'>
+  <view class="weui-flex padd010s" >
+      <view class="weui-flex__item ">
+          <image class='fmimg1s' src='{{item.img}}' bindtap="previewImg" wx:key="*this" data-index='{{index}}' wx:if='{{item.img}}'></image>
+      </view>
+  </view>
+  <view class="weui-flex">
+      <view class="weui-flex__item"><view class="placeholder zhentxt">{{item.title}}</view></view>
+  </view>
+</view>
+
+<!-- 评论 -->
+<view class="weui-flex">
+    <view class="weui-flex__item bt"><view class="placeholder padle10">全部评论</view></view>
+</view>
+<view class='wid100 mar1001'>
+  <view class='wid100 martop-8' wx:for="{{plList}}">
+    <view class="weui-flex padlefs10">
+        <view class="">
+          <image class='gvtimg yinying-1' src="{{item.comment_openid.img_url}}"></image>
+        </view>
+        <view class="weui-flex__item"><view class="placeholder gvname">{{item.comment_openid.name}}</view></view>
+    </view>
+    <view class="weui-flex padlefs10">
+        <view class="weui-flex__item">
+          <view class="pliner">{{item.comment_content}}</view>
+        </view>
+    </view>
+    <view class='wid100 border-pl martop-8'></view>
+  </view>
+</view>
+
+<!-- 评论框 -->
+<view class="weui-flex pad16 margin10 marbop-15"  wx:if='{{srku}}'>
+  <view class="weui-flex__item phss" style=''>
+    <input value='{{plnss}}' type='text' password='{{password}}' focus='{{focus}}' confirm-type='{{confirmType}}' class='font15'  placeholder="请输入评论内容" bindconfirm='searchBtn'></input>
+  </view>
+</view>
+<view style='height:30px;'></view>
+
+
+<!-- 评论图标 fenxiang-->
+<view class='pltb z-in999' bindtap='pingshu' wx:if='{{santubiao}}'>
+  <image src='/images/GrouCopy2x.png' class='plicon'></image>
+</view>
+
+<view class='fenxi1 yinying z-in999' wx:if='{{santubiao}}'>
+  <button open-type='share' class='fenxi-but lin57'>分享</button>
+</view>
+
+<view class='pltb1 z-in999' wx:if='{{santubiao}}'>
+  <image src='{{scimage}}' class='plicon1' bindtap='shoucang'></image>
+</view>

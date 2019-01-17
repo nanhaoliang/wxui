@@ -1,0 +1,43 @@
+<!--pages/govdetail/govdetail.wxml-->
+
+<!-- 封面图 -->
+<view class="weui-flex">
+    <view class="weui-flex__item hei184" wx:for='{{txtimgList.btfm}}'>
+      <image src='{{item.fmimg}}' class='fmimg' bindtap="fenimg" data-index='{{index}}'></image>
+    </view>
+</view>
+
+<!-- 标题 -->
+<view class="weui-flex">
+    <view class="weui-flex__item bt"><view class="placeholder padle10">起个标题吧</view></view>
+</view>
+<view class="weui-flex" wx:for='{{txtimgList.btfm}}'>
+    <view class="weui-flex__item"><input class='btinput' bindinput='bioati' placeholder='请输入标题（8 - 30）字' value='{{item.bititle}}' data-index='{{index}}'></input></view>
+</view>
+
+
+<!-- 图文内容 -->
+<view class="weui-flex">
+    <view class="weui-flex__item bt"><view class="placeholder padle10">正文段落</view></view>
+</view>
+
+
+<view class="weui-flex" wx:for='{{txtimgList.textimgl}}'>
+  <view class="weui-flex__item">
+    <image class='fmimg1s' src='{{item.img}}' bindtap="chooseImage" wx:key="*this" data-index='{{index}}'></image>
+    <textarea class='txtar' placeholder='{{item.text}}' maxlength='-1' bindinput='shuru' data-index='{{index}}' cursor-spacing='50px'>{{title}}</textarea>
+  </view>
+</view>
+
+<view class="weui-flex martop-11">
+    <view class="weui-flex__item">
+      <view class="placeholder">
+        <button bindtap='addtim' class='addtt flright marrig10'>添加段落</button>
+        <button bindtap='delted' class='scbtn flright marrig10'>删除</button>
+      </view>
+    </view>
+</view>
+
+
+<!-- 发布 -->
+<button bindtap='fabu' class='mar12 btnfbus'>发布攻略</button>

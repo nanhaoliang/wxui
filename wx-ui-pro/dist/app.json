@@ -1,0 +1,86 @@
+{
+  "pages": [
+    "example/index",
+
+    "example/logindemo/logindemo",
+
+    "example/button/button",
+    "example/list/list",
+    "example/input/input",
+    "example/slider/slider",
+    "example/uploader/uploader",
+    "example/form/form",
+
+    "example/xscroll/xscroll",
+    "example/badge/badge",
+    "example/flex/flex",
+    "example/footer/footer",
+    "example/grid/grid",
+    "example/icons/icons",
+    "example/loadmore/loadmore",
+    "example/panel/panel",
+    "example/preview/preview",
+    "example/progress/progress",
+    "example/textroll/textroll",
+
+    "example/actionsheet/actionsheet",
+    "example/dialog/dialog",
+    "example/msg/msg",
+    "example/msg/msg_success",
+    "example/msg/msg_fail",
+    "example/picker/picker",
+    "example/toast/toast",
+
+    "example/navbar/navbar",
+    "example/tabbar/tabbar",
+    "example/optiontextbig/optiontextbig",
+    "example/lefttable/lefttable",
+
+    "example/searchbar/searchbar",
+
+    "example/bigimgloadin/bigimgloadin",
+    "example/imglistloadin/imglistloadin",
+
+    "example/textwxParse/textwxParse",
+
+    "example/imgcarousel/imgcarousel",
+
+    "example/drawerlayer/drawerlayer",
+
+    "example/comment/comment",
+
+    "example/cascadeflow/cascadeflow",
+
+    "example/city_picker/city_picker",
+    "example/city_single_page/city_single_page",
+    "example/city_multi_page/city_multi_page",
+    "example/city_multi_page_city/city_multi_page_city",
+    "example/city_multi_page_district/city_multi_page_district",
+
+    "example/calender/calender",
+
+    "example/textimg/textimg",
+    "example/govdetail_xq/govdetail_xq",
+    "example/govdetail/govdetail",
+
+    "example/map/map",
+    "example/address/address",
+
+    "example/shoppinpcart/shoppinpcart",
+    "example/orders/orders"
+
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "WeUI for 小程序",
+    "navigationBarBackgroundColor": "#f8f8f8",
+    "backgroundColor": "#f8f8f8"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

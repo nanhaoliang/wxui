@@ -1,0 +1,12 @@
+<!--example/textwxParse/textwxParse.wxml-->
+<!-- 富文本解析html -->
+<import src="../../wxParse/wxParse.wxml"/>
+
+<view class='page pad16'>
+  <view class='page__title dk-title'></view>
+  <view class="page__bd page__bd_spacing">
+    <view class='dk-show' style='height:{{dkheight}}px;'>
+      <template is="wxParse" data="{{wxParseData:dkcontent.nodes}}"/>
+    </view>
+  </view>
+</view>

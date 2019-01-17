@@ -1,0 +1,75 @@
+/* pages/govdetail/govdetail.wxss */
+
+.fmimg{
+  width:100%;
+  height:184px;
+}
+
+
+.fmimg1s{
+  width:100%;
+}
+
+.hei184{
+  height:184px;
+}
+
+.bt{
+  background: #eee;
+  font-size: 15px;
+  height: 40px;
+  line-height: 35px;
+}
+
+.padle10{
+  padding-left:10px;
+}
+
+.btinput{
+  height:46px;
+  line-height:37px;
+  font-size:18px;
+  padding-top:3px;
+}
+
+.txtar{
+  width:100%;
+  height:100px;
+  max-height: 150px;
+  border-bottom:1px dashed #eee;
+}
+
+.addtt{
+  width:58px;
+  height:27px;
+  font-size:12px;
+  padding:0;
+  background:#fe70a2;
+  color:#fff;
+}
+
+.scbtn{
+  width:58px;
+  height:27px;
+  font-size:12px;
+  padding:0;
+  background:rgba(255, 0, 0, 0.623);
+  color:#fff;
+}
+
+.flright{
+  float: right;
+}
+
+.marrig10{
+  margin-right:10px;
+}
+
+.mar12{
+  margin:12px;
+}
+
+.btnfbus{
+  background:#f2e03d;
+  color: #fff
+}
