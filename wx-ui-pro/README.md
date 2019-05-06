@@ -15,18 +15,6 @@ WxUI Por 小程序 为微信小程序量身设计
 - 组件的wxml结构请看`dist/example/`下的组件
 - 样式文件可直接引用`dist/style/weui.wxss`，或者单独引用`dist/style/widget`下的组件的`wxss`
 
+## lianghn
 
-## 文档
-
-WeUI 视觉标准参考 [weui-design](https://github.com/weui/weui-design)
-
-
-## License
-The MIT License(http://opensource.org/licenses/MIT)
-
-请自由地享受和参与开源
-
-
-## 贡献
-
-如果你有好的意见或建议，欢迎给我们提issue或pull request。
+-hello word lianghn
